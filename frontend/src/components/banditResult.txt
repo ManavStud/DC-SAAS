@@ -1,0 +1,50 @@
+Test results:
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: test.py:58
+57	 
+58	    foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+59	    foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: test.py:59
+58	    foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+59	    foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+60	 
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: test.py:117
+116	        if x1 == foodx and y1 == foody:
+117	            foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+118	            foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: test.py:118
+117	            foodx = round(random.randrange(0, dis_width - snake_block) / 10.0) * 10.0
+118	            foody = round(random.randrange(0, dis_height - snake_block) / 10.0) * 10.0
+119	            Length_of_snake += 1
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 94
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 4
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 0
+		High: 4
+Files skipped (0):

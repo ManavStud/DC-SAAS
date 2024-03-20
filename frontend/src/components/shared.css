@@ -1,0 +1,127 @@
+/* shared.css */
+
+body.modal-open {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.modal,
+.overlay {
+    transition: 0.3s ease-in-out;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    width: 500px;
+    max-width: 80%;
+    height: 30%;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    margin: auto;
+    text-align: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.use-tool-button {
+    background: linear-gradient(90deg, #7845D8 0%, #62C7D1 100%);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.p {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.p2 {
+    margin-left: 120px;
+    margin-right: 120px;
+    color: white;
+    font-size: 30px;
+    text-align: justify;
+    /* font-style: italic; */
+    font-family: 'Khand', sans-serif;
+
+}
+
+.para20 {
+    font-family: 'Khand', sans-serif;
+     font-weight: bold;
+    color: aqua;
+    margin-left: 120px;
+    font-style: normal;
+    font-size: 65px;
+}
+
+.p2 {
+    margin-left: 120px;
+    color: aquae;
+    font-size: 30px;
+    font-family: 'Khand', sans-serif;
+    font-style: normal;
+  }
+
+
+.sqlmap-button {
+    background-color: rgb(24, 24, 131);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    margin-top: 15px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.sqlmap-button:hover {
+    background-color: rgb(94, 185, 241);
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card-container:hover .card-content {
+    box-shadow: 15px 15px 2px #6746ca;
+  }
