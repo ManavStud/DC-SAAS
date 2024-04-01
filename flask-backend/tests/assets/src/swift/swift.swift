@@ -1,1 +1,0 @@
- print("Salt used: \(self.salt)\n")
