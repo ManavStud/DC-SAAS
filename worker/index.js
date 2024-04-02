@@ -1,11 +1,12 @@
-const {Agenda} = require('@hokify/agenda');
+// TODO: Figure out how to start the worker on a different port using the same agenda queue.
+// Current setup runs job on same port as server. May affect scalability.
+// const agenda = require("../common/agenda");
 
-const agenda = new Agenda();
+// const startWorker = async () => {
+//     await agenda.start();
+//     console.log(await agenda.jobs());
+// }
 
-
-const startWorker = () => {
-    agenda.start();
-    console.log('Worker started');
-}
-
-startWorker();
+// startWorker().then(() => {
+//     console.log('Worker started')
+// });

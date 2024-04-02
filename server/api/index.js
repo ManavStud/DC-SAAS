@@ -1,7 +1,7 @@
 const express = require('express');
 const jobRouter = require('./jobs');
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
 
 // Mount the internal routes on the router
 router.use('/job', jobRouter);

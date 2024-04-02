@@ -1,16 +1,11 @@
 const express = require('express');
-const {Agenda} = require('@hokify/agenda');
-
-const router = express.Router();
-
+const agenda = require('../../../common/agenda');
+const router = express.Router({ mergeParams: true });
 // Create a new instance of Agenda
-const agenda = new Agenda();
-
 // Define the route for scheduling a job
 router.post('/schedule', async (req, res) => {
     try {
         const { name, schedule } = req.body;
-
         // Define your job logic here
         agenda.define(name, async (job) => {
             // Your job logic goes here

@@ -1,4 +1,4 @@
-const connectToMongoDB = require('./common/mongo');
+const {connectToMongoDB} = require('./common/mongo');
 
 (async () => {
     await connectToMongoDB();
