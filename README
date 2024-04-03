@@ -1,0 +1,60 @@
+# Project Name
+
+## Description
+SaaS backend for DC's pilot project
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+`npm i`
+
+
+## Usage
+1. Set env variables in .env
+2. Run `npm run start`
+3. To debug, create a vscode launch json and paste following content
+4. Once launch json is created 
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SERVER_MODE": "server",
+                "SERVER_PORT": "3000"
+            },
+            "program": "${workspaceFolder}/index.js",
+            "runtimeArgs": ["--env-file=.env"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run Worker",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "env": {
+                "SERVER_MODE": "worker",
+                "SERVER_PORT": "3001"
+            },
+            "program": "${workspaceFolder}/index.js",
+            "runtimeArgs": ["--env-file=.env"]
+
+        }
+    ]
+}
+```
+
+## License
+Proprietary - DC and its affiliate entities reserve all right to the source code
